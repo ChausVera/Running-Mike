@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Emmenthaler';
+    src: url('fonts/EmmenthalerNormal-BaKx.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+canvas { 
+    background-color: lightskyblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#start {
+    position: absolute;
+    top: 75vh;
+    left: 65vw;
+    display: inline-block;
+    padding: 2vw 4vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.9vw #999;
+}
+
+#start:hover {
+    background-color: rgb(26, 128, 230);
+    box-shadow: 0 0.9vw #1b028d;
+    color: white;
+}
+
+#start:active {
+    background-color: rgb(26, 128, 230);
+    box-shadow: 0 0.5vw #1b028d;
+    transform: translateY(0.4vw);
+    color: white;
+}
+
+#sounds {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    display: inline-block;
+    font-size: 2vw;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.9vw #999;
+}
+
+#sounds:active {
+    box-shadow: 0 0.5vw #666;
+    transform: translateY(0.4vw);
+}
+
+#sounds.checked {
+    background-color: rgb(26, 128, 230);
+    box-shadow: 0 0.9vw #1b028d;
+    color: white;
+}
+
+#sounds.checked:active {
+    box-shadow: 0 0.5vw #1b028d;
+}
+
+.button {
+    display: inline-block;
+    padding: 2vw 4vw;
+    font-size: 2vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.9vw #999;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.button:active {
+    background-color: white;
+    box-shadow: 0 0.5vw #1b028d;
+    transform: translateY(0.4vw);
+}
+
+.arrow-button {
+    position: absolute;
+    top: 35vh;
+    font-size: 3vw;
+    padding: 1vw;
+    background-color: white;
+    border: none;
+    border-radius: 1.5vw;
+    cursor: pointer;
+    box-shadow: 0 0.9vw #999;
+}
+
+.arrow-left {
+    left: 25vw;
+}
+
+.arrow-right {
+    right: 25vw;
+}
+
+.arrow-button:hover {
+    background-color: white;
+}
+
+.arrow-button:active {
+    background-color: white;
+    box-shadow: 0 0.5vw #666;
+    transform: translateY(0.4vw);
+}
+
+.icon {
+    position: absolute;
+    top: 25vh;
+    left: 40vw;
+    width: 20vw;
+    height: auto;
+    z-index: 10;
+}
+
+.levels {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 75vh;
+    left: 20vw;
+}
+
+.levels input[type="radio"] {
+    display: none;
+}
+
+.level-button {
+    display: inline-block;
+    padding: 2vw 4vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+    background-color:  white;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    box-shadow: 0 0.9vw #999;
+}
+
+.levels input[type="radio"]:checked + .level-button {
+    background-color:  rgb(26, 128, 230);
+    box-shadow: 0 0.9vw #1b028d;
+    color: white;
+}
+
+.label {
+    position: absolute;
+    top: 4vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    font-family: 'Emmenthaler', sans-serif;
+    font-size: 5vw;
+    color: rgb(251, 241, 58);
+}
+
+@media (max-width: 600px) {
+    #start {
+        top: 75vh;
+        left: 38vw;
+        font-size: 7vh;
+        border-radius: 15px;
+    }
+
+    .button {
+        padding: 3vw 6vw;
+        font-size: 4vw;
+    }
+
+    .arrow-button {
+        font-size: 6vw;
+        top: 30vw;
+        padding: 2vw;
+    }
+
+    .arrow-left {
+        left: 13vw;
+    }
+
+    .arrow-right {
+        right: 13vw;
+    }
+
+    .icon {
+        top: 22vh;
+        left: 35vw;
+        width: 30vw;
+    }
+
+    .levels {
+        top: 57vh;
+        left: 23vw;
+    }
+
+    .level-button {
+        font-size: 5vw;
+    }
+
+    .label {
+        top: 4vh;
+        font-size: 10vw;
+    }
+}

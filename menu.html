@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Mike</title>
+    <link rel="stylesheet" href="styles.css">
+    <img id="w" class="icon" style="display: none;" src="images/white_right.png" alt="White Mouse">
+    <img id="bl" class="icon" style="display: none;" src="images/black_right.png" alt="Black Mouse">
+    <img id="br"  class="icon" src="images/brown_right.png" alt="Brown Mouse">
+</head>
+<body>
+    <audio id="click">
+        <source src="sounds/click.mp3">
+    </audio>
+    <canvas id="field"></canvas>
+    <div class="label">Mike</div>
+    <button class="button" id="sounds">Sounds</button>
+    <button class="arrow-button arrow-left" aria-label="Left Arrow">←</button>
+    <button class="arrow-button arrow-right" aria-label="Right Arrow">→</button>
+    <button class="button" id="start">Start</button>
+    <div class="levels">
+        <input type="radio" id="level1" name="level" value="1" checked>
+        <label for="level1" class="level-button">Level 1</label>
+        <input type="radio" id="level2" name="level" value="2">
+        <label for="level2" class="level-button">Level 2</label>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
