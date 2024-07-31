@@ -2,7 +2,7 @@
 ## Installation
 #### 1. Clone the repository
 ```bash
- git clone httpsgithub.comChausVeraRunning-Mike
+ git clone https://github.com/ChausVera/Running-Mike
 ```
 #### 2. Run menu.html on Windows
 ```bash
